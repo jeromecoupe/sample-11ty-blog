@@ -4,7 +4,7 @@ Sample Eleventy (11ty) blog as example for workshops.
 
 Using [Gulp](https://gulpjs.com/) and [Webpack](https://webpack.js.org/).
 
-Hosted on [Netlify](https://sample11tyblog.netlify.com)
+You can [preview the site](https://sample11tyblog.netlify.com) on [Netlify](https://www.netlify.com/)
 
 ## Installation
 
