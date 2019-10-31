@@ -1,12 +1,16 @@
 ---
-permalink: blog/index.html
+pagination:
+  data: collections.blogposts
+  size: 12
+  alias: paginatedBlogposts
+permalink: blog{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber + 1}}{% endif %}/index.html
 ---
 {% extends "layouts/base.njk" %}
 
 {% set currentSection = "blog" %}
 
-{% set metaTitle = "Blog" %}
-{% set metaDescription = "Blogposts about Gent" %}
+{% set metaTitle = pageblog.title %}
+{% set metaDescription = pageblog.intro %}
 {% set metaImage = site.metaImage %}
 
 {% block content %}
@@ -14,11 +18,11 @@ permalink: blog/index.html
   <div class="l-container">
 
     <div class="c-pageintro">
-      <h1 class="c-h1">Our blog</h1>
-      <p class="c-pageintro__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloremque dolor magni numquam quod nemo repellendus facilis, veritatis sit voluptatibus ducimus pariatur cum odit reiciendis et sed voluptate iure perferendis.</p>
+      <h1 class="c-h1">{{ pageblog.title }}</h1>
+      <p class="c-pageintro__text">{{ pageblog.intro }}</p>
     </div>
 
-    {% set posts = collections.blogposts | reverse %}
+    {% set posts = paginatedBlogposts %}
     {% for post in posts %}
       {% if loop.first %}<ul class="l-grid  l-grid--fluid">{% endif %}
         <li>
@@ -31,7 +35,31 @@ permalink: blog/index.html
           </article>
         </li>
       {% if loop.last %}</ul>{% endif %}
+    {% else %}
+      <p>No blogpost found</p>
     {% endfor %}
+
+    {# pagination #}
+    {% set totalPages = pagination.hrefs | length %}
+    {% set currentPage = pagination.pageNumber + 1 %}
+    {% if totalPages > 1 %}
+      <ul class="c-pagination">
+        <li class="c-pagination__item  c-pagination__item--first">
+          {% if pagination.previousPageHref %}
+            <a class="c-pagination__link" href="{{ pagination.previousPageHref }}">{% include "svg/arrow-left.svg" %}</a>
+          {% else %}
+            <span class="c-pagination__link  is-disabled">{% include "svg/arrow-left.svg" %}</span>
+          {% endif %}
+        </li>
+        <li class="c-pagination__item  c-pagination__item--last">
+          {% if pagination.nextPageHref %}
+            <a class="c-pagination__link" href="{{ pagination.nextPageHref }}">{% include "svg/arrow-right.svg" %}</a>
+          {% else %}
+            <span class="c-pagination__link  is-disabled">{% include "svg/arrow-right.svg" %}</span>
+          {% endif %}
+        </li>
+      </ul>
+    {% endif %}
 
   </div>
 </main>

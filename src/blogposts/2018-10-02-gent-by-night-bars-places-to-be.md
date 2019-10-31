@@ -1,5 +1,5 @@
 ---
-title: "A tour of gent by night: bars and other places to be"
+title: "Gent by night: bars and other places to be"
 intro: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloremque dolor magni numquam quod nemo repellendus facilis, veritatis sit voluptatibus ducimus pariatur cum odit reiciendis et sed voluptate iure perferendis."
 image: "blogpost-architecture.jpg"
 ---

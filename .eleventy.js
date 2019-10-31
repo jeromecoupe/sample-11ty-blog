@@ -2,9 +2,19 @@ const moment = require("moment");
 const now = new Date();
 
 module.exports = function(eleventyConfig) {
+  // published items
+  // - don't have draft key set to true
+  // - have a date smaller or equal to now
+  const isPublished = (item) => {
+    return item.data.draft !== true && item.date <= now;
+  };
+
   // blogposts collection
   eleventyConfig.addCollection("blogposts", function(collection) {
-    return collection.getFilteredByGlob("./src/blogposts/*.md");
+    return collection
+      .getFilteredByGlob("./src/blogposts/*.md")
+      .filter(isPublished)
+      .reverse();
   });
 
   // team collection

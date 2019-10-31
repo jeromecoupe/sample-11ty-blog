@@ -58,6 +58,7 @@
 
 .c-pagination__link.is-disabled {
   color: $color-gray-light1;
+  cursor: not-allowed;
 
   &:hover {
     color: $color-gray-light1;

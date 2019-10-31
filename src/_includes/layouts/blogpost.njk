@@ -4,18 +4,29 @@
 
 {% set metaTitle = title %}
 {% set metaDescription = intro %}
-{% set metaImage = site.url ~ "/assets/img/blog/600x600/{{ image }}" %}
+{% set metaImage = site.url ~ "/assets/img/blog/600x600/" ~ image %}
 
 {% block content %}
 <main>
   <div class="l-container">
 
-    <div class="l-container-narrow  u-textalign-center@medium  u-margin-bottom-xxl@large">
-      <p class="c-meta  u-margin-bottom-xs"><time datetime="2018-12-22">December 22, 2018</time></p>
+    <div class="l-container-narrow  u-textalign-center@small  u-margin-bottom-xxl@large">
+      <p class="c-meta  u-margin-bottom-xs"><time datetime="{{ date | date('YYYY-MM-DD') }}">{{ date|date("MMMM D, Y") }}</time></p>
       <h1 class="c-h1">{{ title }}</h1>
     </div>
 
-    <div class="c-banner"><img class="u-fluidimage" src="/assets/img/blog/1280x720/{{ image }}" alt="{{ title }}"></div>
+    <div class="c-banner">
+      <picture>
+          <source srcset="/assets/img/blog/800x450/{{ image }} 800w,
+                          /assets/img/blog/1024x576/{{ image }} 1024w,
+                          /assets/img/blog/1280x720/{{ image }} 1280w,"
+                  sizes="100vw"
+                  media="(min-width: 500px)">
+          <img src="/assets/img/blog/600x600/{{ image }}"
+               class="u-fluidimage"
+               alt="{{ title }}">
+      </picture>
+    </div>
 
     <div class="l-container-narrow">
       <div class="c-intro">

@@ -14,21 +14,21 @@ permalink: contact/index.html
   <div class="l-container">
 
     <div class="c-pageintro">
-      <h1 class="c-h1">About us</h1>
-      <p class="c-pageintro__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloremque dolor magni numquam quod nemo repellendus facilis, veritatis sit voluptatibus ducimus pariatur cum odit reiciendis et sed voluptate iure perferendis.</p>
+      <h1 class="c-h1">{{ pagecontact.title }}</h1>
+      <p class="c-pageintro__text">{{ pagecontact.intro }}</p>
     </div>
 
     <div class="l-about">
       <div class="l-about__team">
 
         {% for member in collections.team %}
-          {% if loop.first %}<ul class="l-grid  l-grid--2cols@medium  l-grid--3cols@large">{% endif %}
+          {% if loop.first %}<ul class="l-grid  l-grid--2cols@small  l-grid--3cols@large">{% endif %}
             <li>
               <div class="c-teammember">
                 <div class="u-bluefilter"><img class="c-teammember__image  u-fluidimage" src="/assets/img/team/{{ member.data.image }}" alt=""></div>
                 <div class="c-teammember__body">
                   <h2 class="c-teammember__title">{{ member.data.name }} {{ member.data.surname }}</h2>
-                  <p class="c-teammember__role">{{ member.data.description }}</p>
+                  <p class="c-teammember__role">{{ member.data.function }}</p>
                 </div>
               </div>
             </li>
