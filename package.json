@@ -13,7 +13,9 @@
     "not ie < 11"
   ],
   "scripts": {
-    "postinstall": "npx gulp build"
+    "postinstall": "npx gulp build",
+    "build": "npx gulp build",
+    "watch": "npx gulp watch"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
