@@ -12,6 +12,9 @@
     "last 2 versions",
     "not ie < 11"
   ],
+  "scripts": {
+    "postinstall": "npx gulp build"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
     "@babel/core": "^7.6.4",

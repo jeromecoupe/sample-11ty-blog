@@ -1,9 +1,13 @@
-# Eleventy Starter kit
+# Sample 11ty blog
 
-Starter kit for Eleventy projects.
-Using Gulp and Webpack as build tools.
+Sample Eleventy (11ty) blog as example for workshops.
+
+Using [Gulp](https://gulpjs.com/) and [Webpack](https://webpack.js.org/).
+
+Hosted on Netlify at https://sample11tyblog.netlify.com
 
 - fork repository
-- check that Node is installed
+- check that [Node](https://nodejs.org/en/) and NPM are installed by typing `node --version` in your terminal
 - run `npm install`
-- run `gulp build` then `gulp watch`
+- run `gulp build` to build the site
+- run `gulp watch` to spin Browsersync and viw the site on `http://localhost:3000/`
