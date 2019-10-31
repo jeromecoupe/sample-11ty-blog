@@ -1,5 +1,5 @@
 ---
-title: "ADiscovering Gent on the water"
+title: "Discovering Gent on the water"
 intro: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloremque dolor magni numquam quod nemo repellendus facilis, veritatis sit voluptatibus ducimus pariatur cum odit reiciendis et sed voluptate iure perferendis."
 image: "blogpost-water.jpg"
 ---

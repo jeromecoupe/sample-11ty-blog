@@ -14,8 +14,8 @@ permalink: index.html
   <div class="l-container">
 
     <div class="c-pageintro">
-      <h1 class="c-h1">Gentse blogging</h1>
-      <p class="c-pageintro__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloremque dolor magni numquam quod nemo repellendus facilis, veritatis sit voluptatibus ducimus pariatur cum odit reiciendis et sed voluptate iure perferendis.</p>
+      <h1 class="c-h1">{{ pagehome.title }}</h1>
+      <p class="c-pageintro__text">{{ pagehome.intro }}</p>
     </div>
 
     {% set posts = collections.blogposts | reverse | limit(6) %}
