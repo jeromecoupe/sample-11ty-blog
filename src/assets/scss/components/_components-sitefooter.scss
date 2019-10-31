@@ -1,0 +1,74 @@
+// ---------------------------
+// site footer
+// ---------------------------
+
+.c-sitefooter {
+  margin-top: pxtorem(60px);
+  padding-top: pxtorem(60px);
+  padding-bottom: pxtorem(24px);
+  background-color: $color-gray-dark1;
+  color: $color-gray-light1;
+
+  @include mq(large) {
+    margin-top: pxtorem(90px);
+    padding-top: pxtorem(90px);
+  }
+}
+
+.c-sitefooter__inner {
+  @include mq(medium) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 30px;
+  }
+}
+
+.c-sitefooter__about {
+  margin-bottom: pxtorem(36px);
+
+  @include mq(medium) {
+    margin-bottom: 0;
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+  }
+
+  @include mq(large) {
+    grid-column: 1 / 6;
+  }
+}
+
+.c-sitefooter__nav {
+  margin-bottom: pxtorem(36px);
+
+  @include mq(medium) {
+    margin-bottom: 0;
+    grid-column: 6 / 9;
+    grid-row: 1 / 2;
+  }
+
+  @include mq(large) {
+    grid-column: 7 / 9;
+  }
+}
+
+.c-sitefooter__social {
+  @include mq(medium) {
+    grid-column: 9 / 13;
+    grid-row: 1 / 2;
+  }
+
+  @include mq(large) {
+    grid-column: 10 / 13;
+  }
+}
+
+.c-sitefooter__copyright {
+  margin: 0;
+  border-top: 1px solid $color-gray-dark2;
+  padding-top: 24px;
+
+  @include mq(medium) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+}

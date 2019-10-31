@@ -1,0 +1,9 @@
+[build]
+  # directory to publish
+  publish = "dist/"
+
+  # Default build command.
+  command = "gulp build"
+
+  # Functions directory to deploy to AWS
+  # functions = "functions/"

@@ -1,0 +1,108 @@
+// ---------------------------
+// grids
+// ---------------------------
+
+/**
+ * Just simple generic grids here
+ * The rest is in dedicated components or layouts
+ * If grids need to be compatible with IE11
+ * - activate it in autoprefixer
+ * - avoid auto placement
+ * - use grid areas when you can
+ * - fallback to flexbox for minmax / auto grids
+*/
+
+// ---------------------------
+// settings
+// ---------------------------
+
+$grid-gutter: 30px !default;
+
+$breakpoints-map: (
+  small: (
+    query: "all and (min-width:500px)",
+    generate-helpers: true,
+    generate-grids: true
+  ),
+  medium: (
+    query: "all and (min-width:740px)",
+    generate-helpers: true,
+    generate-grids: true
+  ),
+  large: (
+    query: "all and (min-width:1024px)",
+    generate-helpers: true,
+    generate-grids: true
+  ),
+  xlarge: (
+    query: "all and (min-width:1260px)",
+    generate-helpers: true,
+    generate-grids: false
+  )
+) !default;
+
+// ---------------------------
+// base styles
+// ---------------------------
+
+.l-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+}
+
+.l-grid--full {
+  grid-template-columns: 1fr;
+}
+
+.l-grid--2cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.l-grid--3cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.l-grid--4cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.l-grid--fluid {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+// ---------------------------
+// responsive classes
+// ---------------------------
+
+@each $breakpoint, $values in $breakpoints-map {
+  //get values
+  $query: map-get($values, query);
+  $gridflag: map-get($values, generate-grids);
+
+  //check
+  @if ($gridflag == true) {
+    // write query and styles
+    @media #{$query} {
+      .l-grid--full\@#{$breakpoint} {
+        grid-template-columns: 1fr;
+      }
+
+      .l-grid--2cols\@#{$breakpoint} {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .l-grid--3cols\@#{$breakpoint} {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .l-grid--4cols\@#{$breakpoint} {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+// ---------------------------
+// about page layout
+// ---------------------------
+
+.l-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
+
+  @include mq(medium) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include mq(large) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.l-about__team {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+
+  @include mq(medium) {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+  }
+
+  @include mq(medium) {
+    grid-column: 1 / 9;
+  }
+}
+
+.l-about__info {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+
+  @include mq(medium) {
+    grid-column: 4 / 7;
+    grid-row: 1 / 2;
+  }
+
+  @include mq(medium) {
+    grid-column: 9 / 13;
+  }
+}

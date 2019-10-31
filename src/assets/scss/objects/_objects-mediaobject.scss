@@ -1,0 +1,19 @@
+// ---------------------------
+// media object
+// ---------------------------
+
+.o-mediaobject {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.o-mediaobject__media {
+  flex: 0 0 auto;
+  margin-right: pxtorem(6px);
+}
+
+.o-mediaobject__body {
+  flex: 1 1 100%;
+}

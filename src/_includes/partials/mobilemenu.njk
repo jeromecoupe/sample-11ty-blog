@@ -1,0 +1,8 @@
+<div class="c-mobilemenu  js-mobilemenu">
+  <p class="c-mobilemenu__close  js-closebutton"><a href="#">{% include "svg/icon-close-menu.svg" %}</a></p>
+  {% for navitem in mainnav %}
+    {% if loop.first %}<ul class="c-mobilenav">{% endif %}
+      <li class="c-mobilenav__item"><a class="c-mobilenav__link  {{ 'is-active' if navitem.handle == currentSection }}" href="{{ navitem.url }}">{{ navitem.label }}</a></li>
+    {% if loop.last %}</ul>{% endif %}
+  {% endfor %}
+</div>

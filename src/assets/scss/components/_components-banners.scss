@@ -1,0 +1,11 @@
+// ---------------------------
+// banner
+// ---------------------------
+
+.c-banner {
+  margin-bottom: pxtorem(30px);
+
+  @include mq(large) {
+    margin-bottom: pxtorem(48px);
+  }
+}

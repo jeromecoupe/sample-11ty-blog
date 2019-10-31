@@ -1,0 +1,31 @@
+// ---------------------------
+// breakpoints
+// ---------------------------
+
+$breakpoints-map: (
+  under-medium: (
+    query: "all and (max-width:739px)",
+    generate-helpers: false,
+    generate-grids: false
+  ),
+  small: (
+    query: "all and (min-width:500px)",
+    generate-helpers: true,
+    generate-grids: true
+  ),
+  medium: (
+    query: "all and (min-width:740px)",
+    generate-helpers: true,
+    generate-grids: true
+  ),
+  large: (
+    query: "all and (min-width:1024px)",
+    generate-helpers: true,
+    generate-grids: true
+  ),
+  xlarge: (
+    query: "all and (min-width:1260px)",
+    generate-helpers: true,
+    generate-grids: false
+  )
+);

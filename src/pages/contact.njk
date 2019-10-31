@@ -1,0 +1,92 @@
+---
+permalink: contact/index.html
+---
+{% extends "layouts/base.njk" %}
+
+{% set currentSection = "contact" %}
+
+{% set metaTitle = "About us" %}
+{% set metaDescription = "Team and contact" %}
+{% set metaImage = site.metaImage %}
+
+{% block content %}
+<main>
+  <div class="l-container">
+
+    <div class="c-pageintro">
+      <h1 class="c-h1">About us</h1>
+      <p class="c-pageintro__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloremque dolor magni numquam quod nemo repellendus facilis, veritatis sit voluptatibus ducimus pariatur cum odit reiciendis et sed voluptate iure perferendis.</p>
+    </div>
+
+    <div class="l-about">
+      <div class="l-about__team">
+
+        {% for member in collections.team %}
+          {% if loop.first %}<ul class="l-grid  l-grid--2cols@medium  l-grid--3cols@large">{% endif %}
+            <li>
+              <div class="c-teammember">
+                <div class="u-bluefilter"><img class="c-teammember__image  u-fluidimage" src="/assets/img/team/{{ member.data.image }}" alt=""></div>
+                <div class="c-teammember__body">
+                  <h2 class="c-teammember__title">{{ member.data.name }} {{ member.data.surname }}</h2>
+                  <p class="c-teammember__role">{{ member.data.description }}</p>
+                </div>
+              </div>
+            </li>
+          {% if loop.last %}</ul>{% endif %}
+        {% endfor %}
+
+      </div>
+      <div class="l-about__info">
+
+        <div class="c-panel">
+          {% if contact.company and contact.address | length %}
+            <h2 class="c-h3">Get in touch</h2>
+            <address class="u-margin-bottom-xl">
+              {{ contact.company }}<br>
+              {{ contact.address.street }}, {{ contact.address.number }}<br>
+              {{ contact.address.postcode }} {{ contact.address.city }}
+            </address>
+          {% endif %}
+          <ul class="c-vlist">
+            {% if contact.email %}
+            <li>
+                <div class="o-mediaobject">
+                  <div class="o-mediaobject__media">{% include "svg/icon-email.svg" %}</div>
+                  <div class="o-mediaobject__body">
+                    <h3 class="c-smalltitle u-margin-bottom-none">Get in touch</h3>
+                    <p><a href="mailto:hello@ghentblog.com">{{ contact.email }}</a></p>
+                  </div>
+                </div>
+            </li>
+            {% endif %}
+            {% if contact.phoneMachines and contact.phoneDisplay %}
+            <li>
+              <div class="o-mediaobject">
+                <div class="o-mediaobject__media">{% include "svg/icon-phone.svg" %}</div>
+                <div class="o-mediaobject__body">
+                  <h3 class="c-smalltitle u-margin-bottom-none">Phone</h3>
+                  <p><a href="tel:{{ contact.phoneMachines }}">{{ contact.phoneDisplay }}</a></p>
+                </div>
+              </div>
+            </li>
+            {% endif %}
+            {% if contact.googleMapUrl %}
+            <li>
+              <div class="o-mediaobject">
+                <div class="o-mediaobject__media">{% include "svg/icon-location.svg" %}</div>
+                <div class="o-mediaobject__body">
+                  <h3 class="c-smalltitle u-margin-bottom-none">Get directions</h3>
+                  <p><a href="{{ contact.googleMapUrl }}">View on Google Maps</a></p>
+                </div>
+              </div>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,29 @@
+// ---------------------------
+// team member
+// ---------------------------
+
+.c-teammember {
+  display: block;
+}
+
+.c-teammember__image {
+  display: block;
+  filter: grayscale(1);
+}
+
+.c-teammember__body {
+  margin-top: pxtorem(18px);
+}
+
+.c-teammember__title {
+  margin-bottom: pxtorem(6px);
+  font-weight: 600;
+  font-size: pxtorem(18px);
+  line-height: (24/18);
+  font-family: $fontstack-alt;
+}
+
+.c-teammember__role {
+  color: $color-gray-dark4;
+  margin-bottom: 0;
+}

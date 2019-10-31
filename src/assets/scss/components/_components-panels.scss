@@ -1,0 +1,17 @@
+// ---------------------------
+// panels
+// ---------------------------
+
+.c-panel {
+  background-color: $color-gray-light4;
+  padding: pxtorem(36px) pxtorem(24px);
+
+  @include mq(large) {
+    padding: pxtorem(56px) pxtorem(42px);
+  }
+}
+
+.c-panel--fullheight {
+  box-sizing: border-box;
+  height: 100%;
+}

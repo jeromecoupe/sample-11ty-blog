@@ -1,0 +1,7 @@
+.u-bluefilter {
+  background-color: mix(#000000, $color-brand-dark1, 50%);
+
+  & > img {
+    mix-blend-mode: overlay;
+  }
+}

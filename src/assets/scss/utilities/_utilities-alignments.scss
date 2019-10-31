@@ -1,0 +1,76 @@
+// ---------------------------
+// Alignment helpers
+// ---------------------------
+
+// ---------------------------
+// Settings
+// ---------------------------
+
+$breakpoints-map: (
+  small: (
+    query: "all and (min-width:500px)",
+    generate-helpers: true,
+    generate-grids: true
+  ),
+  medium: (
+    query: "all and (min-width:740px)",
+    generate-helpers: true,
+    generate-grids: true
+  ),
+  large: (
+    query: "all and (min-width:1024px)",
+    generate-helpers: true,
+    generate-grids: true
+  ),
+  xlarge: (
+    query: "all and (min-width:1260px)",
+    generate-helpers: true,
+    generate-grids: false
+  )
+) !default;
+
+// ---------------------------
+// Base classes
+// ---------------------------
+
+.u-textalign-left {
+  text-align: left;
+}
+
+.u-textalign-center {
+  text-align: center;
+}
+
+.u-textalign-right {
+  text-align: center;
+}
+
+// ---------------------------
+// RWD classes
+// ---------------------------
+
+// responsive classes
+@each $breakpoint, $params in $breakpoints-map {
+  // get params and assign
+  $query: map-get($params, query);
+  $helpersflag: map-get($params, generate-helpers);
+
+  // if utility classes have to be generated
+  @if ($helpersflag == true) {
+    // write media query
+    @media #{$query} {
+      // write spacing classes
+      .u-textalign-left\@#{$breakpoint} {
+        text-align: left;
+      }
+
+      .u-textalign-center\@#{$breakpoint} {
+        text-align: center;
+      }
+
+      .u-textalign-right\@#{$breakpoint} {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+// ---------------------------
+// page intros
+// ---------------------------
+
+/**
+ * constrained width on large screens
+ * typograpy for the text
+*/
+
+.c-pageintro {
+  margin-bottom: pxtorem(30px);
+
+  @include mq(medium) {
+    margin-right: 12%;
+    margin-bottom: pxtorem(42px);
+  }
+
+  @include mq(large) {
+    margin-right: 24%;
+    margin-bottom: pxtorem(48px);
+  }
+}
+
+.c-pageintro__text {
+  font-size: pxtorem(18px);
+  font-weight: 400;
+  font-family: $fontstack-alt;
+  color: $color-gray-dark3;
+
+  @include mq(medium) {
+    font-size: pxtorem(20px);
+  }
+}

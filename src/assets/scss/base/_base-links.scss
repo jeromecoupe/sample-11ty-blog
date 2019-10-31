@@ -1,0 +1,12 @@
+// ---------------------------
+// links
+// ---------------------------
+
+a {
+  color: $color-brand-dark1;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

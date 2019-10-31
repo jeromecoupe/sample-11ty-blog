@@ -1,0 +1,32 @@
+{
+  "name": "eleventy-starter",
+  "version": "1.0.0",
+  "description": "Smaple blog with 11ty",
+  "author": "Jérôme Coupé",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeromecoupe/sample-11ty-blog.git"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not ie < 11"
+  ],
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "autoprefixer": "^9.7.0",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "eslint": "^6.6.0",
+    "eslint-loader": "^3.0.2",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "moment": "^2.24.0",
+    "webpack": "^4.41.2"
+  }
+}

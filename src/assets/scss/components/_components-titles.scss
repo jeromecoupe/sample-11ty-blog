@@ -1,0 +1,84 @@
+// ---------------------------
+// titles
+// ---------------------------
+
+.c-h1 {
+  margin-bottom: pxtorem(24px);
+  font-weight: 600;
+  font-size: pxtorem(24px);
+  line-height: (36/30);
+  font-family: $fontstack-alt;
+
+  @include mq(large) {
+    font-size: pxtorem(27px);
+  }
+}
+
+.c-h2 {
+  margin-bottom: pxtorem(18px);
+  font-weight: 600;
+  font-size: pxtorem(24px);
+  line-height: (30/24);
+  font-family: $fontstack-alt;
+
+  @include mq(large) {
+    font-size: pxtorem(24px);
+  }
+}
+
+.c-h3 {
+  margin-bottom: pxtorem(18px);
+  font-weight: 600;
+  font-size: pxtorem(20px);
+  line-height: (24/20);
+  font-family: $fontstack-alt;
+}
+
+.c-h4 {
+  margin-bottom: pxtorem(18px);
+  font-weight: 600;
+  font-size: pxtorem(18px);
+  line-height: (24/18);
+  font-family: $fontstack-alt;
+}
+
+// ---------------------------
+// titles wysiwyg
+// ---------------------------
+
+/**
+ * Must exist in a container with a class of .wysiwyg
+*/
+
+.wysiwyg {
+  h1 {
+  }
+
+  h2 {
+  }
+
+  h3 {
+  }
+
+  h4 {
+  }
+}
+
+// ---------------------------
+// special titles
+// ---------------------------
+
+.c-smalltitle {
+  margin-bottom: pxtorem(18px);
+  font-weight: 600;
+  font-size: pxtorem(16px);
+  color: $color-gray-dark1;
+}
+
+.c-footertitle {
+  margin-bottom: pxtorem(18px);
+  font-weight: 400;
+  font-size: pxtorem(16px);
+  color: $color-white;
+  letter-spacing: pxtorem(1px);
+}

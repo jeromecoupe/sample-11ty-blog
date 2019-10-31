@@ -1,0 +1,47 @@
+// ---------------------------
+// main navigation
+// ---------------------------
+
+.c-mainnav {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include mq(medium) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.c-mainnav__item:not(:last-child) {
+  margin-right: 42px;
+}
+
+.c-mainnav__link {
+  display: inline-block;
+  padding: 6px 12px;
+
+  font-weight: 600;
+  font-size: pxtorem(13px);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: pxtorem(1px);
+  text-decoration: none;
+
+  color: $color-gray-dark1;
+
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: $color-brand-dark1;
+    text-decoration: none;
+  }
+}
+
+.c-mainnav__link.is-active,
+.c-mainnav__link:hover.is-active {
+  color: $color-brand-dark1;
+}

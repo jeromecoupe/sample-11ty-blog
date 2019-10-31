@@ -1,0 +1,32 @@
+<footer class="c-sitefooter">
+  <div class="l-container  c-sitefooter__inner">
+
+    <div class="c-sitefooter__about">
+      <h2 class="c-footertitle">About us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at suscipit orci, nec rutrum arcu. Praesent ut tincidunt.</p>
+      <p><a href="about.html">Get in touch</a></p>
+    </div>
+
+    <nav class="c-sitefooter__nav">
+      <h2 class="c-footertitle">Navigation</h2>
+
+      {% for navitem in mainnav %}
+        {% if loop.first %}<ul class="c-footernav" id="footernav">{% endif %}
+          <li class="c-footernav__item"><a class="c-footernav__link {{ 'is-active' if navitem.handle == currentSection }}" href="{{ navitem.url }}">{{ navitem.label }}</a></li>
+        {% if loop.last %}</ul>{% endif %}
+      {% endfor %}
+    </nav>
+
+    <div class="c-sitefooter__social">
+      <h2 class="c-footertitle">Follow us</h2>
+      <ul class="c-socialmedia">
+        <li class="c-socialmedia__item"><a class="c-socialmedia__link" href="#">{% include "svg/icon-facebook.svg" %}</a></li>
+        <li class="c-socialmedia__item"><a class="c-socialmedia__link" href="#">{% include "svg/icon-instagram.svg" %}</a></li>
+        <li class="c-socialmedia__item"><a class="c-socialmedia__link" href="#">{% include "svg/icon-twitter.svg" %}</a></li>
+        <li class="c-socialmedia__item"><a class="c-socialmedia__link" href="#">{% include "svg/icon-vimeo.svg" %}</a></li>
+      </ul>
+    </div>
+
+    <p class="c-sitefooter__copyright">© {{ site.buildDate | date("YYYY") }} - {{ site.author }}</p>
+  </div>
+</footer>

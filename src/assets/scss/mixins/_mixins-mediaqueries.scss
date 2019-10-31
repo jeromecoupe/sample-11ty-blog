@@ -1,0 +1,57 @@
+// ---------------------------
+// settings
+// ---------------------------
+
+$breakpoints-map: (
+  small: (
+    query: "all and (min-width:500px)",
+    generate-helpers: true,
+    generate-grids: true
+  ),
+  medium: (
+    query: "all and (min-width:740px)",
+    generate-helpers: true,
+    generate-grids: true
+  ),
+  large: (
+    query: "all and (min-width:1024px)",
+    generate-helpers: true,
+    generate-grids: true
+  ),
+  xlarge: (
+    query: "all and (min-width:1260px)",
+    generate-helpers: true,
+    generate-grids: false
+  )
+) !default;
+
+// ---------------------------
+// mixin
+// ---------------------------
+
+/**
+ * Media queries mixin
+ * @param: $breakpoint-name   string
+ *
+ * generates media queries based on $breakpoints map
+*/
+
+@mixin mq($breakpoint-name) {
+  // sanitize
+  $breakpoint-name: unquote($breakpoint-name);
+
+  // check if $breakpoint-name is a known key
+  @if map-has-key($breakpoints-map, $breakpoint-name) {
+    // get params and output media query
+    $params: map-get($breakpoints-map, $breakpoint-name);
+    $query: map-get($params, query);
+
+    // output media query nd content
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    // throw an error
+    @error "'#{$breakpoint-name}' is not a known breakpoint name in $breakpoints-map";
+  }
+}

@@ -1,0 +1,13 @@
+<header class="c-siteheader">
+  <div class="l-container  c-siteheader__inner">
+    <p class="c-siteheader__logo"><a href="/">{% include "svg/logo.svg" %}</a></p>
+    <nav class="c-siteheader__nav">
+      {% for navitem in mainnav %}
+        {% if loop.first %}<ul class="c-mainnav">{% endif %}
+          <li class="c-mainnav__item"><a class="c-mainnav__link {{ 'is-active' if navitem.handle == currentSection }}" href="{{ navitem.url }}">{{ navitem.label }}</a></li>
+        {% if loop.last %}</ul>{% endif %}
+      {% endfor %}
+      <p class="c-hamburger"><a class="js-openbutton" href="#footernav">{% include "svg/hamburger.svg" %}</a></p>
+    </nav>
+  </div>
+</header>

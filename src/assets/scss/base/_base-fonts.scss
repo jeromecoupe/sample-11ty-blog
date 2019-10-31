@@ -1,0 +1,51 @@
+// ---------------------------
+// @font-face
+// ---------------------------
+
+@font-face {
+  font-family: "PT Sans";
+  src: url(../fonts/pt_sans-web-regular-webfont.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url(../fonts/pt_sans-web-italic-webfont.woff2) format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url(../fonts/pt_sans-web-bold-webfont.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url(../fonts/pt_sans-web-bolditalic-webfont.woff2) format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url(../fonts/pt_serif-web-regular-webfont.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url(../fonts/pt_serif-web-bold-webfont.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}

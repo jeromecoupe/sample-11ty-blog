@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ metaTitle ~ " - " if metaTitle }}{{ site.title }}</title>
+  <meta name="description" content="{{ metaDescription if metaDescription else site.description }}">
+
+  <!-- Open Graph + Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="{{ site.authorTwitter }}">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:title" content="{{ metaTitle ~ ' - ' if metaTitle }}{{ site.title }}">
+  <meta property="og:description" content="{{ metaDescription if metaDescription else site.description }}">
+  <meta property="og:image" content="{{ metaImage if metaImage else site.metaImage }}">
+
+  <!-- Apple icon (minimal) -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.min.css?ref={{ site.buildDate | date('X') }}">
+</head>
+<body>
+  {% include "partials/header.njk" %}
+  {% include "partials/mobilemenu.njk" %}
+  {% block content %}{% endblock %}
+  {% include "partials/footer.njk" %}
+  <script src="/assets/js/bundle.min.js?ref={{ site.buildDate | date('X') }}"></script>
+</body>
+</html>

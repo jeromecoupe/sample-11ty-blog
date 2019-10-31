@@ -1,0 +1,16 @@
+// ---------------------------
+// icons
+// ---------------------------
+
+.c-icon {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.c-icon__content {
+  transition: fill 0.2s ease-in-out;
+
+  a:hover & {
+    fill: $color-brand;
+  }
+}

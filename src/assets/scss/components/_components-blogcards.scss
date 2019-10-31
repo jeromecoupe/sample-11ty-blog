@@ -1,0 +1,50 @@
+// ---------------------------
+// blogpost cards
+// ---------------------------
+
+.c-blogcard {
+  display: block;
+}
+
+.c-blogcard__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.c-blogcard__media {
+  overflow: hidden;
+  margin-bottom: pxtorem(24px);
+}
+
+.c-blogcard__media > img {
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+
+  a:hover & {
+    transform: scale(1.1);
+  }
+}
+
+.c-blogcard__meta {
+  font-size: pxtorem(16px);
+  margin-bottom: pxtorem(6px);
+  color: $color-gray-light1;
+}
+
+.c-blogcard__title {
+  margin-bottom: pxtorem(18px);
+  font-weight: 600;
+  font-size: pxtorem(18px);
+  line-height: (24/18);
+  font-family: $fontstack-alt;
+  transition: color 0.2s ease-in-out;
+
+  a:hover & {
+    color: $color-brand-dark1;
+  }
+}

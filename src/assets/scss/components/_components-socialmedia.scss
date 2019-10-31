@@ -1,0 +1,22 @@
+// ---------------------------
+// social media list
+// ---------------------------
+
+.c-socialmedia {
+  list-style: none;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.c-socialmedia__item:not(:last-child) {
+  margin-right: pxtorem(6px);
+}
+
+.c-socialmedia__link {
+  display: block;
+}

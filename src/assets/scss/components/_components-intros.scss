@@ -1,0 +1,14 @@
+// ---------------------------
+// entries intros
+// ---------------------------
+
+.c-intro {
+  font-size: pxtorem(16px);
+  font-weight: 400;
+  font-family: $fontstack-alt;
+  color: $color-gray-dark2;
+
+  @include mq(medium) {
+    font-size: pxtorem(18px);
+  }
+}

@@ -1,0 +1,30 @@
+{% extends "layouts/base.njk" %}
+
+{% set currentSection = "blog" %}
+
+{% set metaTitle = title %}
+{% set metaDescription = intro %}
+{% set metaImage = site.url ~ "/assets/img/blog/600x600/{{ image }}" %}
+
+{% block content %}
+<main>
+  <div class="l-container">
+
+    <div class="l-container-narrow  u-textalign-center@medium  u-margin-bottom-xxl@large">
+      <p class="c-meta  u-margin-bottom-xs"><time datetime="2018-12-22">December 22, 2018</time></p>
+      <h1 class="c-h1">{{ title }}</h1>
+    </div>
+
+    <div class="c-banner"><img class="u-fluidimage" src="/assets/img/blog/1280x720/{{ image }}" alt="{{ title }}"></div>
+
+    <div class="l-container-narrow">
+      <div class="c-intro">
+        <p>{{ intro }}</p>
+      </div>
+
+      {{ content | safe }}
+    </div>
+
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,40 @@
+---
+permalink: index.html
+---
+{% extends "layouts/base.njk" %}
+
+{% set currentSection = "home" %}
+
+{% set metaTitle = "Homepage" %}
+{% set metaDescription = "This is an SEO description for this page" %}
+{% set metaImage = site.metaImage %}
+
+{% block content %}
+<main>
+  <div class="l-container">
+
+    <div class="c-pageintro">
+      <h1 class="c-h1">Gentse blogging</h1>
+      <p class="c-pageintro__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloremque dolor magni numquam quod nemo repellendus facilis, veritatis sit voluptatibus ducimus pariatur cum odit reiciendis et sed voluptate iure perferendis.</p>
+    </div>
+
+    {% set posts = collections.blogposts | reverse | limit(6) %}
+    {% for post in posts %}
+      {% if loop.first %}<ul class="l-grid  l-grid--2cols@small  l-grid--3cols@medium">{% endif %}
+        <li>
+          <article class="c-blogcard">
+            <a class="c-blogcard__link" href="{{ post.url }}">
+              <p class="c-blogcard__media"><img class="u-fluidimage" src="/assets/img/blog/600x600/{{ post.data.image }}" alt="{{ post.data.title }}"></p>
+              <p class="c-blogcard__meta"><time datetime="{{ post.date | date('YYYY-MM-DD') }}">{{ post.date|date("MMMM D, Y") }}</time></p>
+              <h2 class="c-blogcard__title">{{ post.data.title }}</h2>
+            </a>
+          </article>
+        </li>
+      {% if loop.last %}</ul>{% endif %}
+    {% endfor %}
+
+    <p class="u-textalign-center  u-margin-top-xl  u-margin-bottom-none"><a class="c-button" href="/blog/">Blog archives</a></p>
+
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,24 @@
+// ---------------------------
+// margins
+// ---------------------------
+
+/**
+ * Unidirectional margins
+ * Remove all top margins and normalise bottom margins
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+ul,
+ol,
+dl {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
