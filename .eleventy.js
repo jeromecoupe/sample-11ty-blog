@@ -43,8 +43,8 @@ module.exports = function(eleventyConfig) {
   // copy files
   eleventyConfig.addPassthroughCopy("./src/apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
-  eleventyConfig.addPassthroughCopy("./src/assets/img/");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts/");
+  eleventyConfig.addPassthroughCopy("./src/assets/img/");
 
   // override default config
   return {
