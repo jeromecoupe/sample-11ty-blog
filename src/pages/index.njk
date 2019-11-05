@@ -18,7 +18,7 @@ permalink: index.html
       <p class="c-pageintro__text">{{ pagehome.intro }}</p>
     </div>
 
-    {% set posts = collections.blogposts | reverse | limit(6) %}
+    {% set posts = collections.blogposts | limit(6) %}
     {% for post in posts %}
       {% if loop.first %}<ul class="l-grid  l-grid--2cols@small  l-grid--3cols@medium">{% endif %}
         <li>
