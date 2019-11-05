@@ -1,6 +1,7 @@
 [build]
   # directory to publish
   publish = "dist/"
+  environment = { NODE_VERSION = "12.12.0" }
 
   # Default build command.
   command = "gulp build"

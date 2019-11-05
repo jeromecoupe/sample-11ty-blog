@@ -13,7 +13,6 @@
     "not ie < 11"
   ],
   "scripts": {
-    "postinstall": "npx gulp build",
     "build": "npx gulp build",
     "watch": "npx gulp watch"
   },
@@ -21,17 +20,20 @@
     "@11ty/eleventy": "^0.9.0",
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
+    "acorn": "^7.1.0",
     "autoprefixer": "^9.7.0",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "eslint": "^6.6.0",
     "eslint-loader": "^3.0.2",
+    "glob": "^7.1.5",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "moment": "^2.24.0",
+    "sharp": "^0.23.2",
     "webpack": "^4.41.2"
   }
 }
