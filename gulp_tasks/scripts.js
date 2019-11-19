@@ -33,5 +33,5 @@ function scriptsBuild() {
 }
 
 module.exports = {
-  scripts: scriptsBuild
+  build: scriptsBuild
 };

@@ -45,7 +45,7 @@ const transforms = [
 ];
 
 // Create resized images
-function imageTransforms(done) {
+function generateThumbnails(done) {
   transforms.forEach(function(transform) {
     // if folder does not exist create it with all parent folders
     if (!fs.existsSync(transform.dist)) {
@@ -72,5 +72,5 @@ function imageTransforms(done) {
 }
 
 module.exports = {
-  imageTransforms
+  thumbnails: generateThumbnails
 };
