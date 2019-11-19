@@ -2,10 +2,10 @@
 const del = require("del");
 
 // clean dist folder
-function clean() {
+function cleanDist() {
   return del(["./dist/"]);
 }
 
 module.exports = {
-  clean
+  dist: cleanDist
 };

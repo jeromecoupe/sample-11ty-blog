@@ -2,7 +2,7 @@
 const browsersync = require("browser-sync").create();
 
 // browsersync server
-function server(done) {
+function initServer(done) {
   browsersync.init({
     server: "./dist/",
     files: [
@@ -18,5 +18,5 @@ function server(done) {
 }
 
 module.exports = {
-  server
+  init: initServer
 };
