@@ -45,15 +45,15 @@ permalink: blog{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber +
     {% if totalPages > 1 %}
       <ul class="c-pagination">
         <li class="c-pagination__item  c-pagination__item--first">
-          {% if pagination.previousPageHref %}
-            <a class="c-pagination__link" href="{{ pagination.previousPageHref }}">{% include "svg/arrow-left.svg" %}</a>
+          {% if pagination.href.previous %}
+            <a class="c-pagination__link" href="{{ pagination.href.previous }}">{% include "svg/arrow-left.svg" %}</a>
           {% else %}
             <span class="c-pagination__link  is-disabled">{% include "svg/arrow-left.svg" %}</span>
           {% endif %}
         </li>
         <li class="c-pagination__item  c-pagination__item--last">
-          {% if pagination.nextPageHref %}
-            <a class="c-pagination__link" href="{{ pagination.nextPageHref }}">{% include "svg/arrow-right.svg" %}</a>
+          {% if pagination.href.next %}
+            <a class="c-pagination__link" href="{{ pagination.href.next }}">{% include "svg/arrow-right.svg" %}</a>
           {% else %}
             <span class="c-pagination__link  is-disabled">{% include "svg/arrow-right.svg" %}</span>
           {% endif %}
