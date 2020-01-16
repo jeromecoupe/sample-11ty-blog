@@ -1,0 +1,7 @@
+<article class="c-blogcard">
+  <a class="c-blogcard__link" href="{{ post.url }}">
+    <p class="c-blogcard__media"><img class="u-fluidimage" src="/assets/img/blog/600x600/{{ post.data.image }}" loading="lazy" alt="{{ post.data.title }}"></p>
+    <p class="c-blogcard__meta"><time datetime="{{ post.date | date('YYYY-MM-DD') }}">{{ post.date|date("MMMM D, Y") }}</time></p>
+    <h2 class="c-blogcard__title">{{ post.data.title }}</h2>
+  </a>
+</article>
