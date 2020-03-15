@@ -20,7 +20,7 @@
     "@11ty/eleventy": "^0.10.0",
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
-    "acorn": "^7.1.0",
+    "acorn": "^7.1.1",
     "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
