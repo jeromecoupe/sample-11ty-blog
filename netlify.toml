@@ -9,4 +9,4 @@
   # functions = "functions/"
 
   # Node version
-  environment = { NODE_VERSION = "13.6.0" }
+  environment = { NODE_VERSION = "14.0.0" }
