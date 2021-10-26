@@ -9,5 +9,5 @@
 }
 
 .c-vlist > li:not(:last-child) {
-  margin-bottom: pxtorem(12px);
+  margin-bottom: calc(12 / 16 * 1rem);
 }

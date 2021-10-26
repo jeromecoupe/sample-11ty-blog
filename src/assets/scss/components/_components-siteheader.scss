@@ -3,14 +3,14 @@
 // ---------------------------
 
 .c-siteheader {
-  padding: pxtorem(30px) 0 pxtorem(48px);
+  padding: calc(30 / 16 * 1rem) 0 calc(48 / 16 * 1rem);
 
   @include mq(medium) {
-    padding: pxtorem(60px) 0;
+    padding: calc(60 / 16 * 1rem) 0;
   }
 
   @include mq(large) {
-    padding: pxtorem(90px) 0;
+    padding: calc(90 / 16 * 1rem) 0;
   }
 }
 

@@ -9,8 +9,9 @@ permalink: contact/index.html
 {% set metaDescription = "Team and contact" %}
 {% set metaImage = site.metaImage %}
 
+{% from "macros/teamcard.njk" import teamCard %}
+
 {% block content %}
-<main>
   <div class="l-container">
 
     <div class="c-pageintro">
@@ -24,13 +25,12 @@ permalink: contact/index.html
         {% for member in collections.team %}
           {% if loop.first %}<ul class="l-grid  l-grid--2cols@small  l-grid--3cols@large">{% endif %}
             <li>
-              <div class="c-teammember">
-                <div class="u-bluefilter"><img class="c-teammember__image  u-fluidimage" src="/assets/img/team/{{ member.data.image }}" alt=""></div>
-                <div class="c-teammember__body">
-                  <h2 class="c-teammember__title">{{ member.data.name }} {{ member.data.surname }}</h2>
-                  <p class="c-teammember__role">{{ member.data.function }}</p>
-                </div>
-              </div>
+              {{ teamCard(
+                name = member.data.name,
+                surname = member.data.surname,
+                image = member.data.image,
+                function = member.data.function
+              ) }}
             </li>
           {% if loop.last %}</ul>{% endif %}
         {% endfor %}
@@ -88,5 +88,4 @@ permalink: contact/index.html
     </div>
 
   </div>
-</main>
 {% endblock %}

@@ -10,7 +10,7 @@
 
 .c-footernav__link {
   display: block;
-  padding: pxtorem(6px) 0;
+  padding: calc(6 / 16 * 1rem) 0;
   color: $color-brand;
   text-decoration: none;
   transition: color 0.2s ease-in-out;

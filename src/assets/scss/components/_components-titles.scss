@@ -3,42 +3,42 @@
 // ---------------------------
 
 .c-h1 {
-  margin-bottom: pxtorem(24px);
+  margin-bottom: calc(24 / 16 * 1rem);
   font-weight: 600;
-  font-size: pxtorem(24px);
-  line-height: (36/30);
+  font-size: calc(24 / 16 * 1rem);
+  line-height: calc(36 / 30);
   font-family: $fontstack-alt;
 
   @include mq(large) {
-    font-size: pxtorem(27px);
+    font-size: calc(27 / 16 * 1rem);
   }
 }
 
 .c-h2 {
-  margin-bottom: pxtorem(18px);
+  margin-bottom: calc(18 / 16 * 1rem);
   font-weight: 600;
-  font-size: pxtorem(24px);
-  line-height: (30/24);
+  font-size: calc(24 / 16 * 1rem);
+  line-height: calc(30 / 24);
   font-family: $fontstack-alt;
 
   @include mq(large) {
-    font-size: pxtorem(24px);
+    font-size: calc(24 / 16 * 1rem);
   }
 }
 
 .c-h3 {
-  margin-bottom: pxtorem(18px);
+  margin-bottom: calc(18 / 16 * 1rem);
   font-weight: 600;
-  font-size: pxtorem(20px);
-  line-height: (24/20);
+  font-size: calc(20 / 16 * 1rem);
+  line-height: calc(24 / 20);
   font-family: $fontstack-alt;
 }
 
 .c-h4 {
-  margin-bottom: pxtorem(18px);
+  margin-bottom: calc(18 / 16 * 1rem);
   font-weight: 600;
-  font-size: pxtorem(18px);
-  line-height: (24/18);
+  font-size: calc(18 / 16 * 1rem);
+  line-height: calc(24 / 18);
   font-family: $fontstack-alt;
 }
 
@@ -69,16 +69,16 @@
 // ---------------------------
 
 .c-smalltitle {
-  margin-bottom: pxtorem(18px);
+  margin-bottom: calc(18 / 16 * 1rem);
   font-weight: 600;
-  font-size: pxtorem(16px);
+  font-size: 1rem;
   color: $color-gray-dark1;
 }
 
 .c-footertitle {
-  margin-bottom: pxtorem(18px);
+  margin-bottom: calc(18 / 16 * 1rem);
   font-weight: 400;
-  font-size: pxtorem(16px);
+  font-size: 1rem;
   color: $color-white;
-  letter-spacing: pxtorem(1px);
+  letter-spacing: 1px;
 }

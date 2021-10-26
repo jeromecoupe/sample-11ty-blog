@@ -8,26 +8,25 @@
 */
 
 .c-pageintro {
-  margin-bottom: pxtorem(30px);
+  margin-bottom: calc(30 / 16 * 1rem);
+  max-width: 80ch;
 
   @include mq(medium) {
-    margin-right: 12%;
-    margin-bottom: pxtorem(42px);
+    margin-bottom: calc(42 / 16 * 1rem);
   }
 
   @include mq(large) {
-    margin-right: 24%;
-    margin-bottom: pxtorem(48px);
+    margin-bottom: calc(48 / 16 * 1rem);
   }
 }
 
 .c-pageintro__text {
-  font-size: pxtorem(18px);
+  font-size: calc(18 / 16 * 1rem);
   font-weight: 400;
   font-family: $fontstack-alt;
   color: $color-gray-dark3;
 
   @include mq(medium) {
-    font-size: pxtorem(20px);
+    font-size: calc(20 / 16 * 1rem);
   }
 }

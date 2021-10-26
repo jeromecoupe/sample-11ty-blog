@@ -11,7 +11,7 @@
 
 .o-mediaobject__media {
   flex: 0 0 auto;
-  margin-right: pxtorem(6px);
+  margin-right: calc(6 / 16 * 1rem);
 }
 
 .o-mediaobject__body {

@@ -13,8 +13,9 @@ permalink: blog{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber +
 {% set metaDescription = pageblog.intro %}
 {% set metaImage = site.metaImage %}
 
+{% from "macros/blogcard.njk" import blogCard %}
+
 {% block content %}
-<main>
   <div class="l-container">
 
     <div class="c-pageintro">
@@ -26,7 +27,12 @@ permalink: blog{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber +
     {% for post in posts %}
       {% if loop.first %}<ul class="l-grid  l-grid--fluid">{% endif %}
         <li>
-          {% include "partials/blogcard.njk" %}
+          {{ blogCard(
+            title = post.data.title,
+            image = post.data.image,
+            date = post.date,
+            url = post.url
+          ) }}
         </li>
       {% if loop.last %}</ul>{% endif %}
     {% else %}
@@ -56,5 +62,4 @@ permalink: blog{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber +
     {% endif %}
 
   </div>
-</main>
 {% endblock %}

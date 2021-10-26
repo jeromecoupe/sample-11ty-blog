@@ -7,7 +7,16 @@
   <title>{{ metaTitle ~ " - " if metaTitle }}{{ site.title }}</title>
   <meta name="description" content="{{ metaDescription if metaDescription else site.description }}">
 
-  <!-- Open Graph + Twitter -->
+  {# preloads #}
+  <link rel="preload" href="/assets/pt_sans-web-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/pt_sans-web-bolditalic-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/pt_sans-web-italic-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/pt_sans-web-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/pt_serif-web-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/pt_serif-web-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/pt_serif-web-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+
+  {# Open Graph + Twitter #}
   <meta name="twitter:card" content="summary">
   <meta name="twitter:creator" content="{{ site.authorTwitter }}">
   <meta property="og:url" content="{{ site.url }}">
@@ -15,17 +24,20 @@
   <meta property="og:description" content="{{ metaDescription if metaDescription else site.description }}">
   <meta property="og:image" content="{{ metaImage if metaImage else site.metaImage }}">
 
-  <!-- Apple icon (minimal) -->
+  {# Apple icon (minimal) #}
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/assets/css/main.min.css?ref={{ site.buildDate | date('X') }}">
+  {# scripts #}
+  <script type="module" src="/assets/js/main.bundle.js?ref={{ site.buildDate | date('X') }}"></script>
+
+  {# CSS #}
+  <link rel="stylesheet" href="/assets/css/main.css?ref={{ site.buildDate | date('X') }}">
 </head>
 <body>
   {% include "partials/header.njk" %}
-  {% include "partials/mobilemenu.njk" %}
-  {% block content %}{% endblock %}
+  <main>
+    {% block content %}{% endblock %}
+  </main>
   {% include "partials/footer.njk" %}
-  <script src="/assets/js/bundle.min.js?ref={{ site.buildDate | date('X') }}"></script>
 </body>
 </html>

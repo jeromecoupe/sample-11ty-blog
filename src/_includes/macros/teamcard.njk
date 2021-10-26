@@ -1,0 +1,9 @@
+{% macro teamCard(image, name, surname, function) %}
+  <article class="c-teammember">
+    <div class="u-bluefilter"><img class="c-teammember__image  u-fluidimage" src="/assets/img/team/{{ image }}" alt=""></div>
+    <div class="c-teammember__body">
+      <h2 class="c-teammember__title">{{ name }} {{ surname }}</h2>
+      <p class="c-teammember__role">{{ function }}</p>
+    </div>
+  </article>
+{% endmacro %}

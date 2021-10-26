@@ -25,10 +25,10 @@
   padding: 6px 12px;
 
   font-weight: 600;
-  font-size: pxtorem(13px);
+  font-size: calc(13 / 16 * 1rem);
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: pxtorem(1px);
+  letter-spacing: 1px;
   text-decoration: none;
 
   color: $color-gray-dark1;

@@ -10,11 +10,6 @@
 <main>
   <div class="l-container">
 
-    <div class="l-container-narrow  u-textalign-center@small  u-margin-bottom-xxl@large">
-      <p class="c-meta  u-margin-bottom-xs"><time datetime="{{ date | date('YYYY-MM-DD') }}">{{ date|date("MMMM D, Y") }}</time></p>
-      <h1 class="c-h1">{{ title }}</h1>
-    </div>
-
     <div class="c-banner">
       <picture>
           <source srcset="/assets/img/blog/800x450/{{ image }} 800w,
@@ -28,13 +23,18 @@
       </picture>
     </div>
 
-    <div class="l-container-narrow">
+    <article class="l-container-narrow">
+      <header>
+        <p class="c-meta  u-margin-bottom-xs"><time datetime="{{ date | date('YYYY-MM-DD') }}">{{ date|date("MMMM D, Y") }}</time></p>
+        <h1 class="c-h1">{{ title }}</h1>
+      </header>
+
       <div class="c-intro">
         <p>{{ intro }}</p>
       </div>
 
       {{ content | safe }}
-    </div>
+    </article>
 
   </div>
 </main>
