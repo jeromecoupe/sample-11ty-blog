@@ -3,15 +3,15 @@
 // ---------------------------
 
 .c-sitefooter {
-  margin-top: pxtorem(60px);
-  padding-top: pxtorem(60px);
-  padding-bottom: pxtorem(24px);
+  margin-top: calc(60 / 16 * 1rem);
+  padding-top: calc(60 / 16 * 1rem);
+  padding-bottom: calc(24 / 16 * 1rem);
   background-color: $color-gray-dark1;
   color: $color-gray-light1;
 
   @include mq(large) {
-    margin-top: pxtorem(90px);
-    padding-top: pxtorem(90px);
+    margin-top: calc(90 / 16 * 1rem);
+    padding-top: calc(90 / 16 * 1rem);
   }
 }
 
@@ -24,7 +24,7 @@
 }
 
 .c-sitefooter__about {
-  margin-bottom: pxtorem(36px);
+  margin-bottom: calc(36 / 16 * 1rem);
 
   @include mq(medium) {
     margin-bottom: 0;
@@ -38,7 +38,7 @@
 }
 
 .c-sitefooter__nav {
-  margin-bottom: pxtorem(36px);
+  margin-bottom: calc(36 / 16 * 1rem);
 
   @include mq(medium) {
     margin-bottom: 0;

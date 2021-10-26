@@ -4,7 +4,7 @@
 
 .c-categories {
   list-style: none;
-  margin: 0 0 pxtorem(42px);
+  margin: 0 0 calc(42 / 16 * 1rem);
   padding: 0;
   border-top: 1px solid $color-gray-light3;
   border-bottom: 1px solid $color-gray-light3;
@@ -21,15 +21,15 @@
 }
 
 .c-categories__item:not(:last-child) {
-  margin-right: pxtorem(24px);
+  margin-right: calc(24 / 16 * 1rem);
 }
 
 .c-categories__link {
   display: inline-block;
-  padding: pxtorem(18px) 0;
+  padding: calc(18 / 16 * 1rem) 0;
 
   font-weight: 600;
-  font-size: pxtorem(13px);
+  font-size: calc(13 / 16 * 1rem);
   line-height: 1;
   text-transform: uppercase;
   text-decoration: none;

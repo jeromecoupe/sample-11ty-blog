@@ -9,8 +9,9 @@ permalink: index.html
 {% set metaDescription = "This is an SEO description for this page" %}
 {% set metaImage = site.metaImage %}
 
+{% from "macros/blogcard.njk" import blogCard %}
+
 {% block content %}
-<main>
   <div class="l-container">
 
     <div class="c-pageintro">
@@ -20,9 +21,14 @@ permalink: index.html
 
     {% set posts = collections.blogposts | limit(6) %}
     {% for post in posts %}
-      {% if loop.first %}<ul class="l-grid  l-grid--2cols@small  l-grid--3cols@medium">{% endif %}
+      {% if loop.first %}<ul class="l-grid  l-grid--2cols@small  l-grid--4cols@medium">{% endif %}
         <li>
-          {% include "partials/blogcard.njk" %}
+          {{ blogCard(
+            title = post.data.title,
+            image = post.data.image,
+            date = post.date,
+            url = post.url
+          ) }}
         </li>
       {% if loop.last %}</ul>{% endif %}
     {% endfor %}
@@ -30,5 +36,4 @@ permalink: index.html
     <p class="u-textalign-center  u-margin-top-xl  u-margin-bottom-none"><a class="c-button" href="/blog/">Blog archives</a></p>
 
   </div>
-</main>
 {% endblock %}

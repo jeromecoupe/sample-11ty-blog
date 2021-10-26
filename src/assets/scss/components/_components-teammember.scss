@@ -12,14 +12,14 @@
 }
 
 .c-teammember__body {
-  margin-top: pxtorem(18px);
+  margin-top: calc(18 / 16 * 1rem);
 }
 
 .c-teammember__title {
-  margin-bottom: pxtorem(6px);
+  margin-bottom: calc(6 / 16 * 1rem);
   font-weight: 600;
-  font-size: pxtorem(18px);
-  line-height: (24/18);
+  font-size: calc(18 / 16 * 1rem);
+  line-height: calc(24 / 18);
   font-family: $fontstack-alt;
 }
 

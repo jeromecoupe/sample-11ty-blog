@@ -4,10 +4,10 @@
 
 .c-panel {
   background-color: $color-gray-light4;
-  padding: pxtorem(36px) pxtorem(24px);
+  padding: calc(36 / 16 * 1rem) calc(24 / 16 * 1rem);
 
   @include mq(large) {
-    padding: pxtorem(56px) pxtorem(42px);
+    padding: calc(56 / 16 * 1rem) calc(42 / 16 * 1rem);
   }
 }
 

@@ -3,10 +3,10 @@
   publish = "dist/"
 
   # Default build command.
-  command = "gulp build"
+  command = "npm run build"
 
   # Functions directory to deploy to AWS
   # functions = "functions/"
 
   # Node version
-  environment = { NODE_VERSION = "14.0.0" }
+  environment = { NODE_VERSION = "16.4.1" }

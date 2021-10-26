@@ -3,9 +3,9 @@
 // ---------------------------
 
 .c-banner {
-  margin-bottom: pxtorem(30px);
+  margin-bottom: calc(30 / 16 * 1rem);
 
   @include mq(large) {
-    margin-bottom: pxtorem(48px);
+    margin-bottom: calc(48 / 16 * 1rem);
   }
 }

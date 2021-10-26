@@ -6,12 +6,12 @@
   display: inline-block;
   cursor: pointer;
 
-  padding: pxtorem(18px) pxtorem(48px);
+  padding: calc(18 / 16 * 1rem) calc(48 / 16 * 1rem);
   border: none;
   background-color: $color-gray-dark1;
 
   font-weight: 400;
-  font-size: pxtorem(13px);
+  font-size: calc(13 / 16 * 1rem);
   line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
